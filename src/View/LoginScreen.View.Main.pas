@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
   System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.StdCtrls, Vcl.ExtCtrls,
-  Vcl.Imaging.jpeg, Vcl.Buttons, acPNG;
+  Vcl.Imaging.jpeg, Vcl.Buttons, Vcl.Imaging.pngimage;
 
 type
   TfrmLogin = class(TForm)
@@ -18,14 +18,22 @@ type
     Image3: TImage;
     shpButton: TShape;
     edLogin: TEdit;
-    edPassword: TEdit;
     Panel1: TPanel;
     SpeedButton1: TSpeedButton;
     SpeedButton2: TSpeedButton;
+    Panel2: TPanel;
+    Panel3: TPanel;
+    Edit1: TEdit;
+    Label1: TLabel;
+    Image2: TImage;
+    Image4: TImage;
+    Label2: TLabel;
     procedure SpeedButton1Click(Sender: TObject);
     procedure SpeedButton2Click(Sender: TObject);
     procedure Panel1MouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
+    procedure FormCreate(Sender: TObject);
+    procedure applyStyles;
   private
     { Private declarations }
   public
@@ -38,9 +46,26 @@ var
 implementation
 
 uses
-  Vcl.Dialogs;
+  Vcl.Dialogs,
+  LoginScreen.View.Styles.Colors;
 
 {$R *.dfm}
+
+procedure TfrmLogin.applyStyles;
+var
+  Styles : TStyles;
+begin
+  Styles := TStyles.Create;
+  Styles.PANEL_COLOR($00DA8E49, Panel2);
+  Styles.PANEL_COLOR($00DA8E49, Panel3);
+  Styles.SHAPE_COLOR($00DA8E49, shpButton);
+  Label1.Font.Size := Styles.H3;
+end;
+
+procedure TfrmLogin.FormCreate(Sender: TObject);
+begin
+  applyStyles;
+end;
 
 procedure TfrmLogin.Panel1MouseDown(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);
