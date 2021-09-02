@@ -23,8 +23,8 @@ implementation
 
 constructor TStyles.Create;
 begin
-  PANELCOLOR := $00DA8E49;
-  MOVE_BUTTON_COLOR := $00DCA847;
+  PANELCOLOR := $17d149;
+  MOVE_BUTTON_COLOR := $6ded90;
   H1 := 20;
   H2 := 18;
   H3 := 14;

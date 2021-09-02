@@ -19,8 +19,6 @@ type
     shpButton: TShape;
     edLogin: TEdit;
     Panel1: TPanel;
-    SpeedButton1: TSpeedButton;
-    SpeedButton2: TSpeedButton;
     Panel2: TPanel;
     Panel3: TPanel;
     Edit1: TEdit;
@@ -28,19 +26,32 @@ type
     Image2: TImage;
     Image4: TImage;
     Label2: TLabel;
+    Panel4: TPanel;
+    Image5: TImage;
+    Image6: TImage;
+    Panel5: TPanel;
+    Image7: TImage;
+    Panel6: TPanel;
+    Image8: TImage;
     procedure SpeedButton1Click(Sender: TObject);
     procedure SpeedButton2Click(Sender: TObject);
-    procedure Panel1MouseDown(Sender: TObject; Button: TMouseButton;
-      Shift: TShiftState; X, Y: Integer);
     procedure FormCreate(Sender: TObject);
     procedure applyStyles;
     procedure shpButtonMouseMove(Sender: TObject; Shift: TShiftState; X,
       Y: Integer);
     procedure shpButtonMouseLeave(Sender: TObject);
+    procedure FormMouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
+    procedure CenterPanelMouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
+    procedure Panel1MouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
+    procedure Panel4Click(Sender: TObject);
   private
     { Private declarations }
   public
     Styles : TStyles;
+    procedure roundForm;
     { Public declarations }
   end;
 
@@ -61,13 +72,33 @@ begin
   Panel3.Color := Styles.PANELCOLOR;
   shpButton.Brush.Color := Styles.PANELCOLOR;
   shpButton.Pen.Color := Styles.PANELCOLOR;
-  Label1.Font.Size := Styles.H2;
+  Label1.Font.Size := Styles.H3;
+end;
+
+procedure TfrmLogin.CenterPanelMouseDown(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Integer);
+const
+  sc_DragMove = $F012;
+begin
+  ReleaseCapture;
+  Perform(wm_SysCommand, sc_DragMove, 0);
 end;
 
 procedure TfrmLogin.FormCreate(Sender: TObject);
 begin
+  roundForm;
   applyStyles;
 end;
+
+procedure TfrmLogin.FormMouseDown(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Integer);
+const
+  sc_DragMove = $F012;
+begin
+  ReleaseCapture;
+  Perform(wm_SysCommand, sc_DragMove, 0);
+end;
+
 
 procedure TfrmLogin.Panel1MouseDown(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);
@@ -76,6 +107,19 @@ const
 begin
   ReleaseCapture;
   Perform(wm_SysCommand, sc_DragMove, 0);
+end;
+
+procedure TfrmLogin.Panel4Click(Sender: TObject);
+begin
+ frmLogin.Close;
+end;
+
+procedure TfrmLogin.roundForm;
+  var
+  rgn: HRGN;
+begin
+  rgn := CreateRoundRectRgn(0, 0,ClientWidth,ClientHeight,24,24);
+  SetWindowRgn(Handle, rgn, True);
 end;
 
 procedure TfrmLogin.shpButtonMouseLeave(Sender: TObject);

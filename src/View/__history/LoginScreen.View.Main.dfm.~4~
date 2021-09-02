@@ -8672,12 +8672,9 @@ object frmLogin: TfrmLogin
       Top = 362
       Width = 193
       Height = 39
-      Cursor = crHandPoint
       Brush.Color = 14323273
       Pen.Color = 14323273
       Shape = stRoundRect
-      OnMouseLeave = shpButtonMouseLeave
-      OnMouseMove = shpButtonMouseMove
     end
     object Label1: TLabel
       Left = 130
