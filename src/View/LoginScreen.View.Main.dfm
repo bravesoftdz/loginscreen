@@ -3,8 +3,8 @@ object frmLogin: TfrmLogin
   Top = 0
   BorderStyle = bsNone
   Caption = 'Login Screen'
-  ClientHeight = 463
-  ClientWidth = 315
+  ClientHeight = 503
+  ClientWidth = 723
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,22 +14,26 @@ object frmLogin: TfrmLogin
   OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
+  OnMouseDown = FormMouseDown
   PixelsPerInch = 96
   TextHeight = 13
   object CenterPanel: TPanel
     Left = 0
     Top = 0
-    Width = 315
-    Height = 463
+    Width = 723
+    Height = 503
     Align = alClient
     BevelOuter = bvNone
     Padding.Bottom = 5
     ParentBackground = False
     TabOrder = 0
+    OnMouseDown = CenterPanelMouseDown
+    ExplicitWidth = 315
+    ExplicitHeight = 463
     object Image1: TImage
-      Left = -1
-      Top = -43
-      Width = 404
+      Left = 0
+      Top = -27
+      Width = 756
       Height = 552
       Picture.Data = {
         0954506E67496D61676589504E470D0A1A0A0000000D49484452000006400000
@@ -8304,8 +8308,8 @@ object frmLogin: TfrmLogin
         1F40FD47FD8E1C1FB47FFD2F5B84121625484D6C0000000049454E44AE426082}
     end
     object shpBottom: TShape
-      Left = 14
-      Top = 296
+      Left = 214
+      Top = 312
       Width = 285
       Height = 144
       Brush.Color = 16447992
@@ -8313,16 +8317,16 @@ object frmLogin: TfrmLogin
       Shape = stRoundRect
     end
     object shpCenter: TShape
-      Left = 14
-      Top = 85
+      Left = 214
+      Top = 101
       Width = 285
       Height = 287
       Brush.Color = 16447992
       Pen.Style = psClear
     end
     object shpTop: TShape
-      Left = 14
-      Top = 64
+      Left = 214
+      Top = 80
       Width = 285
       Height = 120
       Brush.Color = 16447992
@@ -8330,8 +8334,8 @@ object frmLogin: TfrmLogin
       Shape = stRoundRect
     end
     object Image3: TImage
-      Left = 60
-      Top = 25
+      Left = 263
+      Top = 41
       Width = 193
       Height = 97
       Center = True
@@ -8667,36 +8671,9 @@ object frmLogin: TfrmLogin
         662E1EED60CBD64D26043E4D1A8877A6B76E7A07C4DB64FA7FAD72FB8201B17E
         3C0000000049454E44AE426082}
     end
-    object shpButton: TShape
-      Left = 60
-      Top = 362
-      Width = 193
-      Height = 39
-      Cursor = crHandPoint
-      Brush.Color = 14323273
-      Pen.Color = 14323273
-      Shape = stRoundRect
-      OnMouseLeave = shpButtonMouseLeave
-      OnMouseMove = shpButtonMouseMove
-    end
-    object Label1: TLabel
-      Left = 130
-      Top = 369
-      Width = 50
-      Height = 25
-      Caption = 'Login'
-      Color = clWhite
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = 16579836
-      Font.Height = -19
-      Font.Name = 'Segoe UI Light'
-      Font.Style = [fsBold]
-      ParentColor = False
-      ParentFont = False
-    end
     object Image2: TImage
-      Left = 60
-      Top = 203
+      Left = 260
+      Top = 219
       Width = 24
       Height = 24
       Center = True
@@ -8735,8 +8712,8 @@ object frmLogin: TfrmLogin
         6082}
     end
     object Image4: TImage
-      Left = 60
-      Top = 281
+      Left = 260
+      Top = 297
       Width = 24
       Height = 24
       Center = True
@@ -8778,11 +8755,11 @@ object frmLogin: TfrmLogin
         30307E7CD8B10000000049454E44AE426082}
     end
     object Label2: TLabel
-      Left = 76
-      Top = 144
-      Width = 164
+      Left = 276
+      Top = 160
+      Width = 163
       Height = 25
-      Caption = 'User Autentication'
+      Caption = 'Acesso ao Sistema'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = 8746347
       Font.Height = -19
@@ -8790,9 +8767,89 @@ object frmLogin: TfrmLogin
       Font.Style = [fsBold]
       ParentFont = False
     end
+    object Image5: TImage
+      Left = 459
+      Top = 219
+      Width = 24
+      Height = 24
+      Center = True
+      Picture.Data = {
+        0954506E67496D61676589504E470D0A1A0A0000000D49484452000000100000
+        001010060000004F6323220000000467414D410000B18F0BFC61050000000662
+        4B4744000000000000F943BB7F0000000970485973000000600000006000F06B
+        42CF0000000774494D4507E50902032E2C16DD51FD000002B94944415478DABD
+        554B685351103DD7C63F6A418A1F1094A220E24A115CBAD1D6282888A4A1A9F5
+        838A1BB1DD7421880A4241C595503FB57D5613B3116B9B4D115C09BAE8CA4514
+        2B22827F445AC1C6BC3ECF9D3B69DA3CCAB3169DE125B9F3EE9D393373EEC460
+        0AF190452FD620808F2AB4C088B54EBF57D16E6558D7837CACA50BAFF002CF70
+        0F6745C71025A6D2D08D3472388459E2F2AA069AAB6F5FEB913C3FED9B256ADF
+        3C699FC163AE0B18C53E1CA0EEC5D76800B77117FDD8CF83D69451EB5B02317C
+        0EA31109D4E351C84137F53E9672D71C86BF20B60047F5ED13CC63FD7E601B3D
+        5B2D8401F4A087192F66B1AA78704851F90CEA4B668DD49D781759CA72226926
+        72492BD22270029C421392D8852B61002EF3239AF975D90E1C67E19288A3E38F
+        0397242B3A1F3F99C04269994D6898001A98C8BA30004F10DFD2653362043086
+        1A864F6237BE4C1BC0C44AF4E1A6A463C8294B6560050EB211717C9808204300
+        BD702CAE17A471CCFEEBC025717ECFABDFD30223C046FA4FB015CF275720871B
+        B20848368322B1AE448A5A87F73300602BEBE92AC5E717D35A46004DD88E4F95
+        2D488D1F735C68250712ACC4E569072E933A06776D2DAB3E6A653784F69B0E3C
+        A42E206D46C8FC97522A43FAF874E1632B7B66B9908F0C1C881AF63E43009D6A
+        6D166F018E31455BFA6B6100E592DD216976F097BDF9FD6AFDA69B4E72F62D27
+        C82C6FB4D5E2B8832E0958AB83EBA2F67C8F3A7EC3C998E764AC9D72328626A1
+        C76B9963CE10979EE656AD6FBFEBA1215D2FD2ECD75638FCAC73A0466F413B5B
+        6AAF615B34809294261C64C29D908D0169E90EADD6C023BA1E9442072CBD6196
+        064FF9DB7260405BB305EE169CD15B702E1AC04CC58EA301FE578C12508123DC
+        0DB84D9A481B39D14020EDFF0E40493A0924C756C448E9807F524ED60B398D90
+        F43F499AFA80F3A5C8903192DC71A40FBF014DDCDBF227AFDB0C000000257445
+        5874646174653A63726561746500323032312D30392D30325430333A34363A34
+        342B30303A3030325FFF6E0000002574455874646174653A6D6F646966790032
+        3032312D30392D30325430333A34363A34342B30303A3030430247D200000000
+        49454E44AE426082}
+    end
+    object Shape1: TShape
+      Left = 261
+      Top = 381
+      Width = 193
+      Height = 39
+      Cursor = crHandPoint
+      Brush.Color = 10123619
+      Pen.Color = 14323273
+      Pen.Style = psClear
+      Shape = stRoundRect
+      OnMouseLeave = shpButtonMouseLeave
+      OnMouseMove = shpButtonMouseMove
+    end
+    object shpButton: TShape
+      Left = 260
+      Top = 378
+      Width = 193
+      Height = 39
+      Cursor = crHandPoint
+      Brush.Color = 14323273
+      Pen.Color = 14323273
+      Shape = stRoundRect
+      OnMouseLeave = shpButtonMouseLeave
+      OnMouseMove = shpButtonMouseMove
+    end
+    object Label1: TLabel
+      Left = 330
+      Top = 385
+      Width = 50
+      Height = 25
+      Cursor = crHandPoint
+      Caption = 'Login'
+      Color = clWhite
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = 16579836
+      Font.Height = -19
+      Font.Name = 'Segoe UI Light'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      OnMouseMove = shpButtonMouseMove
+    end
     object edLogin: TEdit
-      Left = 90
-      Top = 206
+      Left = 290
+      Top = 222
       Width = 161
       Height = 21
       BevelInner = bvNone
@@ -8806,13 +8863,13 @@ object frmLogin: TfrmLogin
       Font.Style = []
       ParentFont = False
       TabOrder = 0
-      TextHint = 'Username'
+      TextHint = 'Usu'#225'rio'
     end
     object Panel1: TPanel
       Left = 0
       Top = 0
-      Width = 315
-      Height = 26
+      Width = 723
+      Height = 25
       Align = alTop
       BevelOuter = bvNone
       Caption = 'Panel1'
@@ -8821,46 +8878,148 @@ object frmLogin: TfrmLogin
       ShowCaption = False
       TabOrder = 1
       OnMouseDown = Panel1MouseDown
-      object SpeedButton1: TSpeedButton
-        Left = 290
+      ExplicitWidth = 729
+      object Panel4: TPanel
+        Left = 696
         Top = 0
-        Width = 25
-        Height = 26
+        Width = 27
+        Height = 25
         Align = alRight
-        Caption = 'X'
-        Flat = True
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWhite
-        Font.Height = -11
-        Font.Name = 'Tahoma'
-        Font.Style = []
-        ParentFont = False
-        Spacing = 0
-        OnClick = SpeedButton1Click
-        ExplicitLeft = 328
+        BevelOuter = bvNone
+        Caption = 'Panel4'
+        ShowCaption = False
+        TabOrder = 0
+        OnClick = Panel4Click
+        object Image6: TImage
+          Left = 1
+          Top = 0
+          Width = 24
+          Height = 24
+          Cursor = crHandPoint
+          Center = True
+          Picture.Data = {
+            0954506E67496D61676589504E470D0A1A0A0000000D49484452000000100000
+            001010060000004F6323220000000467414D410000B18F0BFC61050000000662
+            4B4744000000000000F943BB7F0000000970485973000000600000006000F06B
+            42CF0000000774494D4507E5090203301B7A21CB2D000002404944415478DAB5
+            55C14E5341143D4381426C3571E34ED8694491251B17448DC1A8686CE1032011
+            434813C36F901203C118F9006C8D42501252DDE0C69D24686007E10B681B2394
+            BEC799FB2EAF50FA781670269969EFCCBDE7CC997BE71984B42292E8C32DB8EC
+            C01047C3F92E47FBBFDDDFE7D9376404729C1BD8DF2186597CC46A607C536D70
+            D1CB1E4581AE4D488B0578215B6DD0FA5A59FDDF204EEF66BCE29861DF3D4EA0
+            027C811B1775A9A74EC0B0F68D44C0F8BD3E119F401E094A3DADC0C3E70C7C54
+            72834912C9E01346610EEED8915BFE1922F5BACE57756EAD92F28F080E6CA9F5
+            5A409C32111CF6DB30052130A18EA90087350234D2ED0EE73222E812C2C0BC02
+            BB9294064F3836610F2B9CF7B8EF7B20112F89D3307921F04BCD376A80DB8D7F
+            D525818B946E1E9F591DFDF4BB47BB232B316429E957B9CAA778A49E19D5A6A5
+            665C97D5A10A14548158C80DEE8A9B21C425015CF4570E0879CA2CA8357A622E
+            80B84A20AF04E2A1043CD76754E23DE6F0E50C04ECBE7C3D57609D9204B6275F
+            C0B6003EF0AFC05364E9B457F0EF49E8A2C45FDD7A860F8748DAF1B9EC73F043
+            937059D7AF072890B6653840416F4A51385286B6450288AC2B585B8D93559215
+            D8545B70197A39D059FD104D6A8011FCAFE69DFC35B32DCB1C4A1D7E8A93ECCD
+            CC4B604793CBF0A3737ECD02E7087C1957F090B1DFB2976A7D8C3C2245FE2E61
+            5CDC5CBCD4D5483D882AB58D30C502B7C0633E704591905664623D4687547F03
+            0695D07D79B0CD91CFB1ED1B6A5F52EB8CBCF973F81D187F1F7C29CBB7F0E7AC
+            FC0000002574455874646174653A63726561746500323032312D30392D303254
+            30333A34383A32372B30303A3030DB11DCC70000002574455874646174653A6D
+            6F6469667900323032312D30392D30325430333A34383A32372B30303A3030AA
+            4C647B0000000049454E44AE426082}
+          OnClick = Panel4Click
+        end
       end
-      object SpeedButton2: TSpeedButton
-        Left = 265
+      object Panel5: TPanel
+        Left = 672
         Top = 0
-        Width = 25
-        Height = 26
+        Width = 24
+        Height = 25
         Align = alRight
-        Caption = '_'
-        Flat = True
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWhite
-        Font.Height = -11
-        Font.Name = 'Tahoma'
-        Font.Style = []
-        ParentFont = False
-        Spacing = 0
-        OnClick = SpeedButton2Click
-        ExplicitLeft = 304
+        BevelOuter = bvNone
+        Caption = 'Panel4'
+        ShowCaption = False
+        TabOrder = 1
+        OnClick = Panel4Click
+        object Image7: TImage
+          Left = 1
+          Top = 0
+          Width = 24
+          Height = 24
+          Center = True
+          Picture.Data = {
+            0954506E67496D61676589504E470D0A1A0A0000000D49484452000000100000
+            001010060000004F6323220000000467414D410000B18F0BFC61050000000662
+            4B4744000000000000F943BB7F0000000970485973000000600000006000F06B
+            42CF0000000774494D4507E5090203352B218F0FC4000002AF4944415478DAA5
+            556D6F0C51147EEECCBEA8EE26522228C94688A4D87E168B88F850EF12F10748
+            105189F81B6D910A1FF8033E79AD049108F1413429AA1FF860C54B892254B763
+            EDEC78E6CC9949DB35BBAB3D933B37F7DC7BCEF3DC73CEBDD7A0816CC655ACE7
+            E7C1E2E8309BC7B64DFE06B9689D9199A2EAEFC1E6075CC203ECC2730CC7FA37
+            33155D18C02AA4F10B7F301F7DBAE488025B8DF846E24973C5DEE022BEC14105
+            A73082836CE55A0221F038815B709BC6DF09B7952E7E340DFA2FB1B148A392E1
+            FF3E89FC2691AE8848446013AE33D01708F895CAA398C04DD96F0AABE744A08C
+            D7D2B732155589611BFDF7E311F6E2194EC04CCDB1C110F7FF86BD4596A362D8
+            820DB283387131267D097785701593324E60A9F416B2629FC072D5E7B8C6A5CE
+            47E98409767E563266D04D0245094B05EF9540A12E8150C2F52586D992902715
+            70C534024912F0A2ECF7F904AE91C04B5575FC370197B5E2AF0F5396C17E09F5
+            046EC938817619CF2410F81C0E229067E905AACC2C22508DA8402120DE1CE91D
+            3C157FB511F0653C88401E3F5591AD2190C012355C29862E3ECBBC21B520C70B
+            EA129C64B9C511F088DB30052EBEC83885B562E8E0898CB338207B379857373E
+            7104A21414240267F43C9E8C2550C107E95BB15373DAAEE73B352B0241047A61
+            B6B078F2584720FF680C11E82D0D6CF6EFC4D0C662595CC1C7698ED38C1B647E
+            61DD143878AC7E96694A8363E8C3DB448E2EA28214633F27C7A83CCE2ABEA117
+            D19AA68E619C94F14AFA0C76EB45E4133E8787D883178C7844A00357D8529C4E
+            93E50017B340F8E8B8BC3CE722B616A95FACE02355C227A6610706F9BE0C32E1
+            358F5148A48D4492E8115D15C7B4F2EDA681C3C7C888E579028FD2EBE9083814
+            D3C8D146A6A69327C0128787D87CD7DBD5716E0AA0AF2FEAB37C47C6362EB304
+            F7B1B24662FDFF0549CBF1E7F5A31F830000002574455874646174653A637265
+            61746500323032312D30392D30325430333A35333A34322B30303A30307628DE
+            D00000002574455874646174653A6D6F6469667900323032312D30392D303254
+            30333A35333A34322B30303A30300775666C0000000049454E44AE426082}
+        end
+      end
+      object Panel6: TPanel
+        Left = 648
+        Top = 0
+        Width = 24
+        Height = 25
+        Align = alRight
+        BevelOuter = bvNone
+        Caption = 'Panel4'
+        ShowCaption = False
+        TabOrder = 2
+        OnClick = Panel4Click
+        ExplicitLeft = 672
+        object Image8: TImage
+          Left = 1
+          Top = 0
+          Width = 24
+          Height = 24
+          Center = True
+          Picture.Data = {
+            0954506E67496D61676589504E470D0A1A0A0000000D49484452000000100000
+            001010060000004F6323220000000467414D410000B18F0BFC61050000000662
+            4B4744000000000000F943BB7F0000000970485973000000600000006000F06B
+            42CF0000000774494D4507E50902033106003C96B50000015F4944415478DACD
+            554B4A0341107D6DFC821B3D41764244933BA81BB782377011D4B8D06B289104
+            058FE001DC18056FA06004577A025D284423B17D5D5D4EB087211371620A7AA6
+            A7BAE8F7BAAAE795410F6BE31245CCA3834F7E6D7058182CEB6A3E887EE4308C
+            68604466279860EC35EE12F737A1C3E214058CE30DB37C1EA8B72C2B906DD39B
+            256D0761708C493CF130BB9CAF934E3B4EA00B3C83319CE9E2525F80BD095D90
+            C8333EB01A118908B498B612EA7AD2CD3F058E27BD8E2929CD364CB7C62E5D37
+            1A92CB90802F4D4E308A302D9CF375A8C0954C81C34C58E20A81129AEA2C0C90
+            80B3E6378117754C0701F7FABEFAF529FD255B939B05FE593FED756808FC6B09
+            1ABC84557885DB1918B4CF4C15E69DBFE102E628B41DEADCAD2E8E660A6E05CB
+            95673114A21ABC106D654CA046215AA1EA5486488AE3445C33DA178F9566D4BF
+            42FA66E4EC4881F7929B5192A56FC76EAB87E8A469DBF11796FE7C2C890F389D
+            0000002574455874646174653A63726561746500323032312D30392D30325430
+            333A34393A30362B30303A3030D081BB300000002574455874646174653A6D6F
+            6469667900323032312D30392D30325430333A34393A30362B30303A3030A1DC
+            038C0000000049454E44AE426082}
+        end
       end
     end
     object Panel2: TPanel
-      Left = 60
-      Top = 229
+      Left = 260
+      Top = 244
       Width = 193
       Height = 1
       BevelOuter = bvNone
@@ -8871,8 +9030,8 @@ object frmLogin: TfrmLogin
       TabOrder = 2
     end
     object Panel3: TPanel
-      Left = 60
-      Top = 306
+      Left = 260
+      Top = 322
       Width = 193
       Height = 1
       BevelOuter = bvNone
@@ -8883,8 +9042,8 @@ object frmLogin: TfrmLogin
       TabOrder = 3
     end
     object Edit1: TEdit
-      Left = 92
-      Top = 285
+      Left = 292
+      Top = 301
       Width = 161
       Height = 21
       BevelInner = bvNone
@@ -8898,7 +9057,7 @@ object frmLogin: TfrmLogin
       Font.Style = []
       ParentFont = False
       TabOrder = 4
-      TextHint = 'Password'
+      TextHint = 'Senha'
     end
   end
 end
