@@ -35,7 +35,6 @@ type
     Shape2: TShape;
     Shape3: TShape;
     Shape4: TShape;
-    Panel5: TPanel;
     procedure SpeedButton1Click(Sender: TObject);
     procedure SpeedButton2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -50,7 +49,6 @@ type
     procedure Panel4Click(Sender: TObject);
     procedure Image8Click(Sender: TObject);
     procedure Image7Click(Sender: TObject);
-    procedure Panel5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -65,7 +63,7 @@ var
 implementation
 
 uses
-  Vcl.Dialogs, LoginScreen.View.PDV ;
+  Vcl.Dialogs;
 
 {$R *.dfm}
 
@@ -116,12 +114,6 @@ end;
 procedure TfrmLogin.Panel4Click(Sender: TObject);
 begin
  frmLogin.Close;
-end;
-
-procedure TfrmLogin.Panel5Click(Sender: TObject);
-begin
-  Self.Hide;
-  PDV.Show;
 end;
 
 procedure TfrmLogin.roundForm;

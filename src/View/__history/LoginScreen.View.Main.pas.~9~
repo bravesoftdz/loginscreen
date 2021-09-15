@@ -29,13 +29,11 @@ type
     Panel4: TPanel;
     Image5: TImage;
     Image6: TImage;
+    Panel5: TPanel;
+    Image7: TImage;
     Panel6: TPanel;
     Image8: TImage;
     Shape1: TShape;
-    Shape2: TShape;
-    Shape3: TShape;
-    Shape4: TShape;
-    Panel5: TPanel;
     procedure SpeedButton1Click(Sender: TObject);
     procedure SpeedButton2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -43,14 +41,13 @@ type
     procedure shpButtonMouseMove(Sender: TObject; Shift: TShiftState; X,
       Y: Integer);
     procedure shpButtonMouseLeave(Sender: TObject);
+    procedure FormMouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
     procedure CenterPanelMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
     procedure Panel1MouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
     procedure Panel4Click(Sender: TObject);
-    procedure Image8Click(Sender: TObject);
-    procedure Image7Click(Sender: TObject);
-    procedure Panel5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -65,7 +62,7 @@ var
 implementation
 
 uses
-  Vcl.Dialogs, LoginScreen.View.PDV ;
+  Vcl.Dialogs;
 
 {$R *.dfm}
 
@@ -94,15 +91,15 @@ begin
   applyStyles;
 end;
 
-procedure TfrmLogin.Image7Click(Sender: TObject);
+procedure TfrmLogin.FormMouseDown(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Integer);
+const
+  sc_DragMove = $F012;
 begin
-  frmLogin.WindowState := wsMaximized;
+  ReleaseCapture;
+  Perform(wm_SysCommand, sc_DragMove, 0);
 end;
 
-procedure TfrmLogin.Image8Click(Sender: TObject);
-begin
-  Application.Minimize;
-end;
 
 procedure TfrmLogin.Panel1MouseDown(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);
@@ -116,12 +113,6 @@ end;
 procedure TfrmLogin.Panel4Click(Sender: TObject);
 begin
  frmLogin.Close;
-end;
-
-procedure TfrmLogin.Panel5Click(Sender: TObject);
-begin
-  Self.Hide;
-  PDV.Show;
 end;
 
 procedure TfrmLogin.roundForm;

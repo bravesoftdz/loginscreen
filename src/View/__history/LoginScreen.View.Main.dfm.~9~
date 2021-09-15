@@ -28,6 +28,8 @@ object frmLogin: TfrmLogin
     ParentBackground = False
     TabOrder = 0
     OnMouseDown = CenterPanelMouseDown
+    ExplicitWidth = 723
+    ExplicitHeight = 493
     object Image1: TImage
       Left = -19
       Top = -59
@@ -8903,6 +8905,7 @@ object frmLogin: TfrmLogin
       ShowCaption = False
       TabOrder = 1
       OnMouseDown = Panel1MouseDown
+      ExplicitWidth = 723
       object Panel4: TPanel
         Left = 685
         Top = 0
@@ -8914,6 +8917,7 @@ object frmLogin: TfrmLogin
         ShowCaption = False
         TabOrder = 0
         OnClick = Panel4Click
+        ExplicitLeft = 696
         object Image6: TImage
           Left = 2
           Top = 1
@@ -8962,6 +8966,7 @@ object frmLogin: TfrmLogin
         ShowCaption = False
         TabOrder = 1
         OnClick = Panel4Click
+        ExplicitLeft = 672
         object Image8: TImage
           Left = 1
           Top = 1
@@ -9036,11 +9041,11 @@ object frmLogin: TfrmLogin
       TextHint = 'Senha'
     end
     object Panel5: TPanel
-      Left = 517
-      Top = 34
+      Left = 544
+      Top = 360
       Width = 185
       Height = 41
-      Caption = 'PDV Debug'
+      Caption = 'Panel5'
       TabOrder = 5
       OnClick = Panel5Click
     end

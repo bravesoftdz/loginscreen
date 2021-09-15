@@ -65,7 +65,7 @@ var
 implementation
 
 uses
-  Vcl.Dialogs, LoginScreen.View.PDV ;
+  Vcl.Dialogs, Unit1;
 
 {$R *.dfm}
 
@@ -120,7 +120,6 @@ end;
 
 procedure TfrmLogin.Panel5Click(Sender: TObject);
 begin
-  Self.Hide;
   PDV.Show;
 end;
 

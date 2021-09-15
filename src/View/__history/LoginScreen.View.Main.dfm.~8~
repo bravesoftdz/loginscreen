@@ -4,8 +4,8 @@ object frmLogin: TfrmLogin
   Anchors = [akLeft, akTop, akRight, akBottom]
   BorderStyle = bsNone
   Caption = 'Login Screen'
-  ClientHeight = 494
-  ClientWidth = 712
+  ClientHeight = 493
+  ClientWidth = 723
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -20,19 +20,20 @@ object frmLogin: TfrmLogin
   object CenterPanel: TPanel
     Left = 0
     Top = 0
-    Width = 712
-    Height = 494
+    Width = 723
+    Height = 493
     Align = alClient
     BevelOuter = bvNone
     Padding.Bottom = 5
     ParentBackground = False
     TabOrder = 0
     OnMouseDown = CenterPanelMouseDown
+    ExplicitHeight = 503
     object Image1: TImage
       Left = -19
       Top = -59
       Width = 756
-      Height = 553
+      Height = 552
       Picture.Data = {
         0954506E67496D61676589504E470D0A1A0A0000000D49484452000006400000
         03840806000000F94DFDA2000000017352474200AECE1CE90000FFFF49444154
@@ -8463,7 +8464,7 @@ object frmLogin: TfrmLogin
     end
     object Image3: TImage
       Left = 313
-      Top = 34
+      Top = 31
       Width = 94
       Height = 97
       Center = True
@@ -8843,8 +8844,8 @@ object frmLogin: TfrmLogin
         30307E7CD8B10000000049454E44AE426082}
     end
     object Label1: TLabel
-      Left = 332
-      Top = 384
+      Left = 330
+      Top = 385
       Width = 50
       Height = 25
       Cursor = crHandPoint
@@ -8893,7 +8894,7 @@ object frmLogin: TfrmLogin
     object Panel1: TPanel
       Left = 0
       Top = 0
-      Width = 712
+      Width = 723
       Height = 25
       Align = alTop
       BevelOuter = bvNone
@@ -8904,7 +8905,7 @@ object frmLogin: TfrmLogin
       TabOrder = 1
       OnMouseDown = Panel1MouseDown
       object Panel4: TPanel
-        Left = 685
+        Left = 696
         Top = 0
         Width = 27
         Height = 25
@@ -8952,7 +8953,7 @@ object frmLogin: TfrmLogin
         end
       end
       object Panel6: TPanel
-        Left = 661
+        Left = 672
         Top = 0
         Width = 24
         Height = 25
@@ -8962,6 +8963,7 @@ object frmLogin: TfrmLogin
         ShowCaption = False
         TabOrder = 1
         OnClick = Panel4Click
+        ExplicitLeft = 648
         object Image8: TImage
           Left = 1
           Top = 1
@@ -9034,15 +9036,6 @@ object frmLogin: TfrmLogin
       ParentFont = False
       TabOrder = 4
       TextHint = 'Senha'
-    end
-    object Panel5: TPanel
-      Left = 517
-      Top = 34
-      Width = 185
-      Height = 41
-      Caption = 'PDV Debug'
-      TabOrder = 5
-      OnClick = Panel5Click
     end
   end
 end
