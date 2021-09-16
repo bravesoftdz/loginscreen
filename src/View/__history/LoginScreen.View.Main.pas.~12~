@@ -35,6 +35,7 @@ type
     Shape2: TShape;
     Shape3: TShape;
     Shape4: TShape;
+    Panel5: TPanel;
     procedure SpeedButton1Click(Sender: TObject);
     procedure SpeedButton2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -49,8 +50,7 @@ type
     procedure Panel4Click(Sender: TObject);
     procedure Image8Click(Sender: TObject);
     procedure Image7Click(Sender: TObject);
-    procedure shpButtonMouseDown(Sender: TObject; Button: TMouseButton;
-      Shift: TShiftState; X, Y: Integer);
+    procedure Panel5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -118,19 +118,19 @@ begin
  frmLogin.Close;
 end;
 
+procedure TfrmLogin.Panel5Click(Sender: TObject);
+begin
+  Self.Hide;
+  PDV.Show;
+end;
+
 procedure TfrmLogin.roundForm;
-var
+  var
   rgn: HRGN;
 begin
   frmLogin.DoubleBuffered := True;
   rgn := CreateRoundRectRgn(0, 0,ClientWidth,ClientHeight,12,12);
   SetWindowRgn(Handle, rgn, True);
-end;
-
-procedure TfrmLogin.shpButtonMouseDown(Sender: TObject; Button: TMouseButton;
-  Shift: TShiftState; X, Y: Integer);
-begin
-  PDV.Show;
 end;
 
 procedure TfrmLogin.shpButtonMouseLeave(Sender: TObject);

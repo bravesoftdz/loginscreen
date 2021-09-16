@@ -8418,7 +8418,6 @@ object frmLogin: TfrmLogin
       Brush.Color = 14323273
       Pen.Color = 14323273
       Shape = stRoundRect
-      OnMouseDown = shpButtonMouseDown
       OnMouseLeave = shpButtonMouseLeave
       OnMouseMove = shpButtonMouseMove
     end
@@ -9035,6 +9034,15 @@ object frmLogin: TfrmLogin
       ParentFont = False
       TabOrder = 4
       TextHint = 'Senha'
+    end
+    object Panel5: TPanel
+      Left = 517
+      Top = 34
+      Width = 185
+      Height = 41
+      Caption = 'PDV Debug'
+      TabOrder = 5
+      OnClick = Panel5Click
     end
   end
 end
